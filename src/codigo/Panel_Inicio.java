@@ -14,14 +14,14 @@ import java.awt.event.KeyListener;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JTextArea;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
 
 public final class Panel_Inicio extends FondoPanel implements ActionListener, KeyListener{
     
-    JTextArea titulo;
+    JLabel titulo;
     public static JTextField nombre;
     JButton iniciar;
     
@@ -30,14 +30,17 @@ public final class Panel_Inicio extends FondoPanel implements ActionListener, Ke
         super("fondo1.jpg");
         setLayout(new FlowLayout(FlowLayout.CENTER, 500, 45));
         //----------------------------------------------------------------
-        titulo = new JTextArea();
-        titulo.setFont(new Font("Berlin Sans FB", Font.BOLD, 80));
-        String mensaje = "APRENDIZAJE\n           DE\n    MATRICES";
+        titulo = new JLabel();
+        // titulo.setFont(new Font("Berlin Sans FB", Font.BOLD, 80));
+        // String mensaje = "APRENDIZAJE\n           DE\n    MATRICES";
         //String mensaje = "\n¡BOOM!\n";
-        titulo.append(mensaje);
-        titulo.setForeground(Color.YELLOW);
-        titulo.setOpaque(false);
-        titulo.setEditable(false);
+        // titulo.append(mensaje);
+        // titulo.setForeground(Color.YELLOW);
+        // titulo.setOpaque(false);
+        // titulo.setEditable(false);
+        ImageIcon img = new ImageIcon(getClass().getResource("/imagenes/titulo.png"));
+        titulo.setPreferredSize(new Dimension(670, 280));
+        titulo.setIcon(new ImageIcon(img.getImage().getScaledInstance(670, 280, Image.SCALE_SMOOTH)));
         add(titulo);
         //----------------------------------------------------------------
         nombre = new JTextField();
