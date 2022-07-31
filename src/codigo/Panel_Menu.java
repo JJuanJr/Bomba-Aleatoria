@@ -10,6 +10,8 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -17,9 +19,12 @@ import javax.swing.SwingConstants;
 public class Panel_Menu extends FondoPanel implements ActionListener{
     
     GridBagConstraints c = new GridBagConstraints();
-    JButton bInfo, bScore, bJuegos, bUser;
+    JButton bInfo, bScore, bJuegos, bUser, bCreditos;
     private Herramientas herramientas = new Herramientas();
 
+    /**
+     * 
+     */
     public Panel_Menu() {
         super("fondo3.jpg");
         setLayout(new GridBagLayout());
@@ -30,12 +35,10 @@ public class Panel_Menu extends FondoPanel implements ActionListener{
         menu.setFont(new Font("Berlin Sans FB", Font.BOLD, 70));
         menu.setForeground(Color.YELLOW);
         menu.setOpaque(false);
-        c.gridx = 0;
+        c.gridx = 1;
         c.gridy = 0;
-        c.gridwidth = 2;
         add(menu, c);
-        c.weighty = 0;
-        c.gridwidth = -1;
+ 
         
         bInfo = herramientas.crearBotones("", 220, 200, "/imagenes/manual.png");
         bInfo.addActionListener(this);
@@ -69,8 +72,8 @@ public class Panel_Menu extends FondoPanel implements ActionListener{
         
         bScore = herramientas.crearBotones("", 220, 200, "/imagenes/score.png");
         bScore.addActionListener(this);
-        c.gridx = 0;
-        c.gridy = 3;
+        c.gridx = 2;
+        c.gridy = 1;
         add(bScore, c);
         
         JLabel score = new JLabel("PUNTUACIONES", SwingConstants.CENTER);
@@ -78,13 +81,13 @@ public class Panel_Menu extends FondoPanel implements ActionListener{
         score.setFont(new Font("Berlin Sans FB", Font.BOLD, 30));
         score.setForeground(Color.YELLOW);
         score.setOpaque(false);
-        c.gridx = 0;
-        c.gridy = 4;
+        c.gridx = 2;
+        c.gridy = 2;
         add(score, c);
         
         bUser = herramientas.crearBotones("", 220, 200, "/imagenes/user.png");
         bUser.addActionListener(this);
-        c.gridx = 1;
+        c.gridx = 0;
         c.gridy = 3;
         add(bUser, c);
         
@@ -93,9 +96,32 @@ public class Panel_Menu extends FondoPanel implements ActionListener{
         usuario .setFont(new Font("Berlin Sans FB", Font.BOLD, 30));
         usuario .setForeground(Color.YELLOW);
         usuario .setOpaque(false);
-        c.gridx = 1;
+        c.gridx = 0;
         c.gridy = 4;
         add(usuario , c);
+
+        JLabel logo = new JLabel();
+        ImageIcon img = new ImageIcon(getClass().getResource("/imagenes/logoU.png"));
+        logo.setPreferredSize(new Dimension(670, 280));
+        logo.setIcon(new ImageIcon(img.getImage().getScaledInstance(230, 200, Image.SCALE_SMOOTH)));
+        c.gridx = 1;
+        c.gridy = 3;
+        add(logo, c);
+
+        bCreditos = herramientas.crearBotones("", 210, 190, "/imagenes/creditos.png");
+        bCreditos.addActionListener(this);
+        c.gridx = 2;
+        c.gridy = 3;
+        add(bCreditos, c);
+
+        JLabel creditos = new JLabel("CRÉDITOS", SwingConstants.CENTER);
+        creditos .setPreferredSize(new Dimension(350, 40));
+        creditos .setFont(new Font("Berlin Sans FB", Font.BOLD, 30));
+        creditos .setForeground(Color.YELLOW);
+        creditos .setOpaque(false);
+        c.gridx = 2;
+        c.gridy = 4;
+        add(creditos , c);
     }
     
     @Override
@@ -113,6 +139,9 @@ public class Panel_Menu extends FondoPanel implements ActionListener{
         }
         if (e.getSource() == bJuegos) {
             c1.show(Ventana.pEnlace, "JUEGOS");
+        }
+        if (e.getSource() == bCreditos) {
+            c1.show(Ventana.pEnlace, "CREDITOS");
         }
     }
     

@@ -31,6 +31,8 @@ public class Ventana extends JFrame implements WindowListener {
     public static TreeMap<String, PersonaPuntaje> tmPunt;
     public static VentanaJuego1 juego1;
     public static VentanaJuego2 juego2;
+    Panel_Creditos pCreditos;
+    
 
     public Ventana() {
         setTitle("[ BOMBA ALEATORIA ]");
@@ -63,6 +65,8 @@ public class Ventana extends JFrame implements WindowListener {
         juego1 = new VentanaJuego1();
 
         juego2 = new VentanaJuego2();
+
+        pCreditos = new Panel_Creditos();
     }
 
     public void CargarDatos() {
@@ -128,7 +132,7 @@ public class Ventana extends JFrame implements WindowListener {
         pEnlace.add(pJuegos, "JUEGOS");
         pEnlace.add(juego1, "JUEGO1");
         pEnlace.add(juego2, "JUEGO2");
-
+        pEnlace.add(pCreditos, "CREDITOS");
         for (int i = 0; i < 2; ++i) {
             for (int j = 0; j < 3; ++j) {
                 pPuntuaciones[i][j] = new Panel_Puntuaciones("JUEGO " + (i + 1) + " - " + obtenerDificultad(j));
