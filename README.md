@@ -4,8 +4,7 @@ Este aplicativo fue desarrollado con el fin de apoyar a las nuevas generaciones 
 
 ## Desarrolladores
 
-Juan Jose Ortiz Plaza
-Arlison Adrian Escudero Ospina
+Juan Jose Ortiz Plaza y Arlison Adrian Escudero Ospina
 
 ## Coordinador
 
