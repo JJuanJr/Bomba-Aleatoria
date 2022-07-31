@@ -1,18 +1,12 @@
-## Getting Started
+## BOMBA ALEATORIA
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este aplicativo fue desarrollado con el fin de apoyar a las nuevas generaciones de ingenieros de la Universidad de la Amazonia enfocándonos en el área de Lógica y Algoritmos 1 y 2. La aplicación fue desarrollada en el lenguaje de programación JAVA, siendo una herramienta que permite a los usuarios aprender o practicar el posicionamiento de elementos en una matriz para mejorar sus conocimientos a la hora de aplicar a problemas matriciales. A su vez se incentiva la competitiva sana mediante un sistema de puntuaciones donde los usuarios se tienen que esforzar en conseguir los mejores tiempos para estar entre el top 10 de cada juego en sus respectivas dificultades
 
-## Folder Structure
+## Desarrolladores
 
-The workspace contains two folders by default, where:
+Juan Jose Ortiz Plaza
+Arlison Adrian Escudero Ospina
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Coordinador
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Ing. Oscar Fabian Patiño Perdomo
